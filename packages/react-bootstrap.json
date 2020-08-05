@@ -2,6 +2,9 @@
   "name": "react-bootstrap",
   "version": "1.3.0",
   "isDesignSystem": true,
+  "css": {
+    "primary": "npm:bootstrap@4.5.1/dist/css/bootstrap.min.css"
+  },
   "components": {
     "Alert": {
       "name": "Alert",
