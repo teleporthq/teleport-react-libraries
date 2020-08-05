@@ -1,0 +1,121 @@
+{
+  "name": "antd",
+  "version": "4.5.1",
+  "isDesignSystem": true,
+  "css": {
+    "primary": "npm:antd@4.5.1/dist/antd.css"
+  },
+  "components": {
+    "Affix": {
+      "name": "Affix",
+      "package": "antd",
+      "namedImport": true,
+      "props": {
+        "offSetBottom": {
+          "type": "number",
+          "default": null,
+          "context": "Offset from the bottom of the viewport (in pixels)"
+        },
+        "offSetTop": {
+          "type": "number",
+          "default": 0,
+          "context": "Offset from the top of the viewport (in pixels)"
+        },
+        "target": {
+          "type": "function",
+          "context": "Specifies the scrollable area DOM node"
+        },
+        "onChange": {
+          "type": "function",
+          "context": "Callback for when Affix state is changed"
+        }
+      }
+    },
+    "Alert": {
+      "name": "Alert",
+      "noChildren": true,
+      "namedImport": true,
+      "package": "antd",
+      "props": {
+        "type": {
+          "type": "string",
+          "default": "info",
+          "context": "Type of Alert style, success, info, warning, error",
+          "options": ["info", "success", "info", "warning", "error"]
+        },
+        "showIcon": {
+          "type": "boolean",
+          "default": false,
+          "context": "Whether to show Icon"
+        },
+        "message": {
+          "type": "string",
+          "default": null,
+          "context": "Content of Alert"
+        },
+        "description": {
+          "type": "string",
+          "default": null,
+          "context": "Additational content of Alert"
+        }
+      }
+    },
+    "Card": {
+      "name": "Card",
+      "package": "antd",
+      "namedImport": true,
+      "props": {
+        "title": {
+          "type": "string",
+          "default": null,
+          "context": "Card title"
+        },
+        "hoverable": {
+          "type": "boolean",
+          "default": false,
+          "context": "Lift up when hovering card"
+        },
+        "size": {
+          "type": "string",
+          "default": "small",
+          "context": "Size of card"
+        }
+      }
+    },
+    "Button": {
+      "name": "Button",
+      "namedImport": true,
+      "package": "antd",
+      "props": {
+        "type": {
+          "type": "string",
+          "default": "default",
+          "context": "Can be set to primary, ghost, dashed, danger, link, text, default",
+          "options": ["primary", "ghost", "dashed", "link", "text", "default"]
+        },
+        "danger": {
+          "type": "boolean",
+          "default": false,
+          "context": "Set the danger status of button"
+        },
+        "size": {
+          "type": "string",
+          "default": null,
+          "context": "Can be set to circle, round or omitted",
+          "options": ["large", "middle", "small"]
+        },
+        "shape": {
+          "type": "string",
+          "default": null,
+          "context": "Can be set to circle, round or omitted",
+          "options": ["circle", "rounded"]
+        },
+        "href": {
+          "type": "string",
+          "default": null,
+          "context": "To add link to a button"
+        }
+      }
+    }
+  }
+}

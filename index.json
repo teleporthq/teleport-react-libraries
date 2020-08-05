@@ -1,0 +1,9 @@
+{
+  "systems": {
+    "antd": "antd",
+    "reactBootstrap": "react-bootstrap"
+  },
+  "packages": {
+    "reactSocialIcons": "react-social-icons"
+  }
+}
