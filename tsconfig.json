@@ -7,7 +7,7 @@
     "lib": ["es2015", "dom"],
     "rootDir": "types",
     "sourceMap": true,
-    "types": ["node", "jest"],
+    "types": ["node"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
@@ -23,6 +23,7 @@
     "dist",
     "./__tests__/**/*",
     "scripts",
-    "validators"
+    "validators",
+    "packages"
   ]
 }

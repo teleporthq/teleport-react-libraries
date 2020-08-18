@@ -8,6 +8,7 @@ const run = () => {
     Object.values(JSON.parse(index)).forEach((item) => {
       Object.values(item).forEach((file) => {
         const content = readFileSync(`src/packages/${file}.json`, "utf-8");
+
         if (JSON.parse(content)) {
           const result = libraryDecoder.run(JSON.parse(content));
           if (result.ok) {
@@ -22,6 +23,7 @@ const run = () => {
     });
   } catch (e) {
     console.error(e);
+    throw new Error(e);
   }
 };
 
