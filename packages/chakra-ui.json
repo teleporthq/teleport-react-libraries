@@ -1,0 +1,123 @@
+{
+  "name": "@chakra-ui/core",
+  "isDesignSystem": true,
+  "theme": {
+    "defaultTheme": "ThemeProvider",
+    "attrs": {
+      "theme": {
+        "path": "@chakra-ui/core",
+        "version": "0.8.0"
+      }
+    }
+  },
+  "components": {
+    "Select": {
+      "name": "Select",
+      "namedImport": true,
+      "hasChildElements": false,
+      "props": {
+        "size": {
+          "type": "string",
+          "propName": "size",
+          "defaultValue": "md",
+          "options": ["sm", "md", "lg"],
+          "context": "The visual size of select element"
+        },
+        "icon": {
+          "type": "string",
+          "propName": "icon",
+          "defaultValue": "chevron-down",
+          "context": "The icon to use in place of chevron-down"
+        },
+        "variant": {
+          "propName": "variant",
+          "type": "string",
+          "defaultValue": "outline",
+          "context": "The variant of the select style to use.",
+          "options": ["outline", "unstyled", "flushed", "filled"]
+        },
+        "isDisabled": {
+          "propName": "isDisabled",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Set the disabled status of select"
+        }
+      }
+    },
+    "Button": {
+      "name": "Button",
+      "namedImport": true,
+      "hasChildElements": true,
+      "props": {
+        "aria-label": {
+          "propName": "aria-label",
+          "type": "string",
+          "context": "The label of button"
+        },
+        "variantColor": {
+          "propName": "variantColor",
+          "type": "string",
+          "context": "Use a color that is defined in themes"
+        },
+        "variant": {
+          "propName": "variant",
+          "type": "string",
+          "defaultValue": "solid",
+          "context": "The variant of the button style to use.",
+          "options": ["outline", "ghost", "unstyled", "link", "solid"]
+        },
+        "isDisabled": {
+          "propName": "isDisabled",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Set the disabled status of button"
+        },
+        "isLoading": {
+          "propName": "isLoading",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Set the loading status of button"
+        },
+        "loadingText": {
+          "propName": "loadingText",
+          "type": "string",
+          "context": "The text to show when the button is loading"
+        },
+        "size": {
+          "propName": "size",
+          "type": "string",
+          "defaultValue": "md",
+          "options": ["xs", "sm", "md", "lg"],
+          "context": "Define the size of the button"
+        }
+      }
+    }
+  },
+  "npm": {
+    "dependency": {
+      "path": "@chakra-ui/core",
+      "version": "^0.8.0"
+    }
+  },
+  "cdn": {
+    "dependency": {
+      "path": "npm:@chakra-ui/core",
+      "version": "0.8.0"
+    },
+    "cdn": "jspm.dev"
+  },
+  "peerDependencies": {
+    "@emotion/core": {
+      "path": "@emotion/core",
+      "version": "^10.0.34"
+    },
+    "@emotion/styled": {
+      "path": "@emotion/styled",
+      "version": "^10.0.27"
+    },
+    "emotion-theming": {
+      "path": "emotion-theming",
+      "version": "^10.0.27"
+    }
+  }
+}

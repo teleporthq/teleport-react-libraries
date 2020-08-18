@@ -1,8 +1,7 @@
-import { UIDLPropDefinition } from "@teleporthq/teleport-types";
-
 export interface LibraryDefinition {
   name: string;
   isDesignSystem: boolean;
+  theme?: ThemeProviders;
   components: Record<string, ReactComponent>;
   npm: NPMDependency;
   cdn: CDNDependency;
@@ -11,13 +10,21 @@ export interface LibraryDefinition {
 
 export interface ReactComponent {
   name: string;
-  dependency: Dependency;
-  props: Record<string, UIDLPropDefinition>;
+  namedImport: boolean;
+  hasChildElements: boolean;
+  props?: Record<string, PropDefinition>;
+}
+
+export interface PropDefinition {
+  propName: string;
+  type: "string" | "number" | "boolean";
+  defaultValue?: string | number | boolean;
+  options?: string[] | number[];
+  context: string;
 }
 
 export interface ThemeProviders {
   defaultTheme: string;
-  dependency: Dependency;
   attrs?: Record<string, Dependency>;
 }
 

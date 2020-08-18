@@ -1,5 +1,6 @@
 {
   "systems": {
-    "antd": "antd"
+    "antd": "antd",
+    "chakra-ui": "chakra-ui"
   }
 }
