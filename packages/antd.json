@@ -1,6 +1,5 @@
 {
   "name": "antd",
-  "version": "4.5.1",
   "isDesignSystem": true,
   "css": {
     "primary": "npm:antd@4.5.1/dist/antd.css"
