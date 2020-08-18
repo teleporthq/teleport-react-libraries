@@ -18,5 +18,11 @@
     "noImplicitAny": true,
     "incremental": true
   },
-  "exclude": ["node_modules", "dist", "./__tests__/**/*"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "./__tests__/**/*",
+    "scripts",
+    "validators"
+  ]
 }
