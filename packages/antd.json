@@ -1,120 +1,140 @@
 {
   "name": "antd",
   "isDesignSystem": true,
-  "css": {
-    "primary": "npm:antd@4.5.1/dist/antd.css"
-  },
   "components": {
-    "Affix": {
-      "name": "Affix",
-      "package": "antd",
+    "Dropdown": {
+      "name": "Dropdown",
       "namedImport": true,
+      "hasChildElements": false,
       "props": {
-        "offSetBottom": {
-          "type": "number",
-          "default": null,
-          "context": "Offset from the bottom of the viewport (in pixels)"
-        },
-        "offSetTop": {
-          "type": "number",
-          "default": 0,
-          "context": "Offset from the top of the viewport (in pixels)"
-        },
-        "target": {
-          "type": "function",
-          "context": "Specifies the scrollable area DOM node"
-        },
-        "onChange": {
-          "type": "function",
-          "context": "Callback for when Affix state is changed"
-        }
-      }
-    },
-    "Alert": {
-      "name": "Alert",
-      "noChildren": true,
-      "namedImport": true,
-      "package": "antd",
-      "props": {
-        "type": {
-          "type": "string",
-          "default": "info",
-          "context": "Type of Alert style, success, info, warning, error",
-          "options": ["info", "success", "info", "warning", "error"]
-        },
-        "showIcon": {
+        "arrow": {
+          "propName": "arrow",
           "type": "boolean",
-          "default": false,
-          "context": "Whether to show Icon"
+          "defaultValue": false,
+          "context": "Whether the dropdown arrow should be visible"
         },
-        "message": {
-          "type": "string",
-          "default": null,
-          "context": "Content of Alert"
-        },
-        "description": {
-          "type": "string",
-          "default": null,
-          "context": "Additational content of Alert"
-        }
-      }
-    },
-    "Card": {
-      "name": "Card",
-      "package": "antd",
-      "namedImport": true,
-      "props": {
-        "title": {
-          "type": "string",
-          "default": null,
-          "context": "Card title"
-        },
-        "hoverable": {
+        "disabled": {
+          "propName": "disabled",
           "type": "boolean",
-          "default": false,
-          "context": "Lift up when hovering card"
+          "defaultValue": false,
+          "context": "Whether the dropdown menu is disabled"
         },
-        "size": {
+        "placement": {
+          "propName": "placement",
           "type": "string",
-          "default": "small",
-          "context": "Size of card"
+          "defaultValue": "bottomLeft",
+          "options": [
+            "bottomLeft",
+            "bottomRight",
+            "bottomCenter",
+            "topLeft",
+            "topCenter",
+            "topRight"
+          ],
+          "context": "Placement of popup menu"
+        },
+        "visible": {
+          "propName": "visible",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Whether the dropdown menu is currently visible"
         }
       }
     },
     "Button": {
       "name": "Button",
       "namedImport": true,
-      "package": "antd",
+      "hasChildElements": true,
       "props": {
         "type": {
+          "propName": "type",
           "type": "string",
-          "default": "default",
-          "context": "Can be set to primary, ghost, dashed, danger, link, text, default",
-          "options": ["primary", "ghost", "dashed", "link", "text", "default"]
-        },
-        "danger": {
-          "type": "boolean",
-          "default": false,
-          "context": "Set the danger status of button"
+          "defaultValue": "default",
+          "options": [
+            "primary",
+            "ghost",
+            "dashed",
+            "dangeer",
+            "link",
+            "text",
+            "default"
+          ],
+          "context": "Used to set the type of button"
         },
         "size": {
+          "propName": "size",
           "type": "string",
-          "default": null,
-          "context": "Can be set to circle, round or omitted",
-          "options": ["large", "middle", "small"]
+          "options": ["large", "middle", "small"],
+          "context": "Set the size of the button"
+        },
+        "target": {
+          "propName": "target",
+          "type": "string",
+          "context": "Same as target attribute of a, works when href is specified"
         },
         "shape": {
+          "propName": "shape",
           "type": "string",
-          "default": null,
-          "context": "Can be set to circle, round or omitted",
-          "options": ["circle", "rounded"]
+          "options": ["circle", "round"],
+          "context": "Can be used to set the shape of the button or omitted"
+        },
+        "loading": {
+          "propName": "loading",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Used in setting the loading state of button"
+        },
+        "htmlType": {
+          "propName": "htmlType",
+          "type": "string",
+          "defaultValue": "button",
+          "context": "Set the original html type of button. see the MDN docs"
         },
         "href": {
+          "propName": "href",
           "type": "string",
-          "default": null,
-          "context": "To add link to a button"
+          "context": "Redirect url of link button"
+        },
+        "ghost": {
+          "propName": "ghost",
+          "type": "string",
+          "defaultValue": false,
+          "context": "Make background transparent and invert text and border colors"
+        },
+        "disabled": {
+          "propName": "disabled",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Disabled state of button"
+        },
+        "danger": {
+          "propName": "danger",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Set the danger status of button"
+        },
+        "block": {
+          "propName": "block",
+          "type": "boolean",
+          "defaultValue": false,
+          "context": "Option to fit button width to its parent width"
         }
       }
     }
+  },
+  "npm": {
+    "dependency": {
+      "path": "antd",
+      "version": "^4.5.4"
+    },
+    "styles": ["antd/dist/antd.css"]
+  },
+  "cdn": {
+    "dependency": {
+      "path": "npm:antd",
+      "version": "4.5.4"
+    },
+    "cdn": "jspm.dev",
+    "styles": ["npm:antd@4.5.1/dist/antd.css"]
   }
 }

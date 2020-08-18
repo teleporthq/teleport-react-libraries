@@ -1,4 +1,3 @@
-import { propDefinitionsDecoder } from "@teleporthq/teleport-uidl-validator/dist/cjs/decoders/utils";
 import {
   Decoder,
   object,
@@ -7,6 +6,9 @@ import {
   optional,
   boolean,
   dict,
+  union,
+  constant,
+  number,
 } from "@mojotech/json-type-validation";
 import {
   NPMDependency,
@@ -15,6 +17,7 @@ import {
   ThemeProviders,
   LibraryDefinition,
   ReactComponent,
+  PropDefinition,
 } from "../types";
 
 export const dependencyDecoder: Decoder<Dependency> = object({
@@ -29,30 +32,39 @@ export const dependencyDecoder: Decoder<Dependency> = object({
 
 export const npmDependencyDeocder: Decoder<NPMDependency> = object({
   dependency: dependencyDecoder,
-  styles: array(string()),
+  styles: optional(array(string())),
 });
 
 export const cdnDependencyDeocder: Decoder<CDNDependency> = object({
   cdn: string(),
   dependency: dependencyDecoder,
-  styles: array(string()),
+  styles: optional(array(string())),
 });
 
 export const themeprovidersDeocder: Decoder<ThemeProviders> = object({
   defaultTheme: string(),
-  dependency: dependencyDecoder,
   attrs: optional(dict(dependencyDecoder)),
+});
+
+export const propDefinitionDecoder: Decoder<PropDefinition> = object({
+  propName: string(),
+  type: union(constant("string"), constant("number"), constant("boolean")),
+  defaultValue: optional(union(string(), number(), boolean())),
+  options: optional(union(array(string()), array(number()))),
+  context: string(),
 });
 
 export const reactComponentDecoder: Decoder<ReactComponent> = object({
   name: string(),
-  dependency: dependencyDecoder,
-  props: dict(propDefinitionsDecoder),
+  namedImport: boolean(),
+  hasChildElements: boolean(),
+  props: optional(dict(propDefinitionDecoder)),
 });
 
 const libraryDefinitionDecoder: Decoder<LibraryDefinition> = object({
   name: string(),
   isDesignSystem: boolean(),
+  theme: optional(themeprovidersDeocder),
   components: dict(reactComponentDecoder),
   npm: npmDependencyDeocder,
   cdn: cdnDependencyDeocder,
