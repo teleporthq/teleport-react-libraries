@@ -1,5 +1,6 @@
 {
   "name": "antd",
+  "slug": "antd",
   "isDesignSystem": true,
   "components": {
     "Dropdown": {

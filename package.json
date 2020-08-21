@@ -9,8 +9,7 @@
     "lint:fix": "npm run lint -- --fix",
     "validate": "ts-node scripts/validate.ts",
     "dev": "ts-node scripts/watcher.ts",
-    "build": "npm run clean && tsc",
-    "clean": "rm -rf dist"
+    "build": "tsc"
   },
   "devDependencies": {
     "@mojotech/json-type-validation": "^3.1.0",

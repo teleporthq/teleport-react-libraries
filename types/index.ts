@@ -1,5 +1,6 @@
 export interface LibraryDefinition {
   name: string;
+  slug: string;
   isDesignSystem: boolean;
   theme?: ThemeProviders;
   components: Record<string, ReactComponent>;

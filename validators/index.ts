@@ -63,6 +63,7 @@ export const reactComponentDecoder: Decoder<ReactComponent> = object({
 
 const libraryDefinitionDecoder: Decoder<LibraryDefinition> = object({
   name: string(),
+  slug: string(),
   isDesignSystem: boolean(),
   theme: optional(themeprovidersDeocder),
   components: dict(reactComponentDecoder),

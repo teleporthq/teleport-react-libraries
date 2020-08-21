@@ -1,5 +1,6 @@
 {
   "name": "@chakra-ui/core",
+  "slug": "chakra-ui",
   "isDesignSystem": true,
   "theme": {
     "defaultTheme": "ThemeProvider",
