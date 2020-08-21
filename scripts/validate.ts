@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import libraryDecoder from "../validators";
+import libraryDecoder from "../src/validators";
 
 const run = () => {
   const index = readFileSync("index.json", "utf-8");
