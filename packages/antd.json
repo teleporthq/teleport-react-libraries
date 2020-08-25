@@ -126,16 +126,16 @@
   "npm": {
     "dependency": {
       "path": "antd",
-      "version": "^4.5.4"
+      "version": "^4.6.1"
     },
     "styles": ["antd/dist/antd.css"]
   },
   "cdn": {
     "dependency": {
-      "path": "npm:antd",
-      "version": "4.5.4"
+      "path": "antd",
+      "version": "4.6.1"
     },
-    "cdn": "jspm.dev",
-    "styles": ["npm:antd@4.5.1/dist/antd.css"]
+    "cdn": "cdn.skypack.dev",
+    "styles": ["https://cdn.skypack.dev/antd@4.6.1/dist.antd.css"]
   }
 }

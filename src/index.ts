@@ -1,4 +1,21 @@
-import * as Types from "./types";
+import {
+  LibraryDefinition,
+  ReactComponent,
+  PropDefinition,
+  ThemeProviders,
+  Dependency,
+  NPMDependency,
+  CDNDependency,
+} from "./types";
 import * as Validator from "./validators";
 
-export { Types, Validator };
+export {
+  LibraryDefinition,
+  ReactComponent,
+  PropDefinition,
+  CDNDependency,
+  NPMDependency,
+  ThemeProviders,
+  Dependency,
+  Validator,
+};
