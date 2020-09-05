@@ -5,7 +5,7 @@ export interface LibraryDefinition {
   theme?: ThemeProviders;
   components: Record<string, ReactComponent>;
   npm: NPMDependency;
-  cdn: CDNDependency;
+  cdn: NPMDependency;
   peerDependencies?: Record<string, Dependency>; // Only used when building project cdn's automatically resolve them
 }
 
@@ -31,7 +31,7 @@ export interface ThemeProviders {
 
 export interface Dependency {
   path: string;
-  version?: string;
+  version: string;
   meta?: {
     namedImport: boolean;
   };
@@ -40,8 +40,4 @@ export interface Dependency {
 export interface NPMDependency {
   dependency: Dependency;
   styles?: string[];
-}
-
-export interface CDNDependency extends NPMDependency {
-  cdn: string; // skypack.dev jspm.io
 }

@@ -12,7 +12,6 @@ import {
 } from "@mojotech/json-type-validation";
 import {
   NPMDependency,
-  CDNDependency,
   Dependency,
   ThemeProviders,
   LibraryDefinition,
@@ -31,12 +30,6 @@ export const dependencyDecoder: Decoder<Dependency> = object({
 });
 
 export const npmDependencyDeocder: Decoder<NPMDependency> = object({
-  dependency: dependencyDecoder,
-  styles: optional(array(string())),
-});
-
-export const cdnDependencyDeocder: Decoder<CDNDependency> = object({
-  cdn: string(),
   dependency: dependencyDecoder,
   styles: optional(array(string())),
 });
@@ -68,7 +61,7 @@ const libraryDefinitionDecoder: Decoder<LibraryDefinition> = object({
   theme: optional(themeprovidersDeocder),
   components: dict(reactComponentDecoder),
   npm: npmDependencyDeocder,
-  cdn: cdnDependencyDeocder,
+  cdn: npmDependencyDeocder,
   peerDependencies: optional(dict(dependencyDecoder)),
 });
 

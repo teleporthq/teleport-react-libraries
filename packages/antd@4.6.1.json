@@ -1,6 +1,6 @@
 {
   "name": "antd",
-  "slug": "antd",
+  "slug": "antd@4.6.1",
   "isDesignSystem": true,
   "components": {
     "Dropdown": {
@@ -135,7 +135,6 @@
       "path": "antd",
       "version": "4.6.1"
     },
-    "cdn": "cdn.skypack.dev",
     "styles": ["https://cdn.skypack.dev/antd@4.6.1/dist.antd.css"]
   }
 }
