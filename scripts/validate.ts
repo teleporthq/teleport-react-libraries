@@ -21,6 +21,10 @@ const run = () => {
                 throw new Error(`Invalid package name ${parsedContent.name}`);
               }
 
+              if (parsedContent.slug !== file) {
+                throw new Error("File name and slug name are not equal");
+              }
+
               return;
             } else {
               console.error(result);
