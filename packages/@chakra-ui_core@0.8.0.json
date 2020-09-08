@@ -1,5 +1,6 @@
 {
   "name": "@chakra-ui/core",
+  "slug": "@chakra-ui_core@0.8.0",
   "isDesignSystem": true,
   "theme": {
     "defaultTheme": "ThemeProvider",
@@ -101,10 +102,9 @@
   },
   "cdn": {
     "dependency": {
-      "path": "npm:@chakra-ui/core",
+      "path": "@chakra-ui/core",
       "version": "0.8.0"
-    },
-    "cdn": "jspm.dev"
+    }
   },
   "peerDependencies": {
     "@emotion/core": {
