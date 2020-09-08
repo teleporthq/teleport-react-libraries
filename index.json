@@ -1,6 +1,6 @@
 {
   "systems": {
     "antd": ["antd@4.6.1"],
-    "chakra-ui": ["chakra-ui@0.8.0"]
+    "chakra-ui": ["@chakra-ui_core@0.8.0"]
   }
 }
