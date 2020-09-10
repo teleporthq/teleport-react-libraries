@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import validate from "validate-npm-package-name";
-import libraryDecoder from "../src/validators";
-import { LibraryDefinition } from "../src/types";
+import libraryDecoder from "../validators";
+import { LibraryDefinition } from "../types";
 
 const run = () => {
   const index = readFileSync("index.json", "utf-8");
