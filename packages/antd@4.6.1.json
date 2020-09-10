@@ -135,6 +135,6 @@
       "path": "antd",
       "version": "4.6.1"
     },
-    "styles": ["https://cdn.skypack.dev/antd@4.6.1/dist.antd.css"]
+    "styles": ["https://unpkg.com/antd@4.6.1/dist/antd.min.css"]
   }
 }
